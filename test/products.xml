@@ -1,0 +1,69 @@
+<products>
+
+  <product>
+
+  <id>1</id> 
+  
+<name>Laptop</name>
+  
+  
+<price>999.99</price>
+  
+  
+<category>Electronics</category>
+  
+  
+</product>
+
+  <product>
+
+  <id>2</id> 
+  
+<name>Chair</name>
+  
+  
+<price>49.99</price>
+  
+  
+<category>Furniture</category>
+  
+  
+</product>
+
+  <product>
+
+  <id>3</id> 
+  
+<name>Smartphone</name>
+  
+ <price>599.99</price> 
+  
+<category>Electronics</category>
+  
+</product>
+
+  <product>
+
+  <id>4</id> 
+  
+<name>Table</name>
+  
+ <price>89.99</price> 
+  
+<category>Furniture</category>
+  
+ </product>
+
+  <product>
+
+  <id>5</id> 
+  
+<name>Headphones</name>
+  
+ <price>199.99</price> 
+  
+<category>Electronics</category>
+  
+ </product>
+
+  </products>
