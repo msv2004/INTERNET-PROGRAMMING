@@ -1,0 +1,32 @@
+<html>
+    <style>
+        /* Initial styles for the text message */
+        #textMessage {
+            background-color: red;
+            color: blue;
+            font-size: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+<body>
+    <div id="textMessage">This is a text message.</div>
+    <button id="changeStyleButton">Change Style</button>
+
+    <script>
+        // Function to change the text style
+        function changeTextStyle() {
+            const textMessage = document.getElementById('textMessage');
+            textMessage.style.backgroundColor = 'green';
+            textMessage.style.color = 'yellow';
+            textMessage.style.fontSize = '12px';
+            textMessage.style.fontWeight = 'bold';
+        }
+
+        // Add event listener to the button
+        document.getElementById('changeStyleButton').addEventListener('click', changeTextStyle);
+    </script>
+
+</body>
+</html>

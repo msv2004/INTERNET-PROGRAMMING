@@ -1,0 +1,44 @@
+<html>
+    <script>
+        function validate_form() {
+            let valid = true;
+            let contactName = document.contact_form.contact_name.value.trim();
+
+            // Check if name is empty
+            if (contactName == "") {
+                alert("Please fill in the 'Your Name' box.");
+                valid = false;
+            }
+            // Check if name contains numbers
+            else if (!/^[a-zA-Z ]+$/.test(contactName)) {
+                alert("Name should not contain numbers or special characters.");
+                valid = false;
+            }
+            // Check if name length is less than 3
+            else if (contactName.length < 3) {
+                alert("Name should be at least 3 characters long.");
+                valid = false;
+            }
+            else {
+                alert("Successful");
+            }
+
+            // Clear the text box upon submission
+            document.contact_form.contact_name.value = "";
+
+            return valid;
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFFF56;
+        }
+    </style>
+<body>
+    <form name="contact_form" method="post" onsubmit="return validate_form();">
+        <h1>Please Enter Your Name</h1>
+        <p>Your Name: <input type="text" name="contact_name"></p>
+        <p><input type="submit" name="send" value="Send Details"></p>
+    </form>
+</body>
+</html>

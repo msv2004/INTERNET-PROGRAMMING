@@ -1,0 +1,107 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffcccb; /* Baby pink background */
+    text-align: center; /* Center-align all text */
+    line-height: 1.6; /* Improve readability */
+}
+
+header {
+    background: #343a40; /* Dark background for the header */
+    color: #ffffff;
+    padding: 20px 0; /* More padding for a spacious look */
+}
+
+header h1 {
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul > li {
+    display: inline;
+    margin: 0 15px; /* Space between navigation items */
+    position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background: #495057; /* Darker background for the submenu */
+    padding: 10px;
+    list-style-type: none;
+    border-radius: 5px; /* Rounded corners for submenu */
+    top: 100%; /* Position submenu directly below the parent item */
+    left: 0; /* Align submenu to the left of the parent item */
+    z-index: 1000; /* Ensure the submenu appears above other elements */
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #ffcccb; /* Change link color on hover */
+}
+
+main {
+    padding: 20px;
+    background-color: #ffffff; /* White background for the main content area */
+    border-radius: 5px; /* Rounded corners for the main content area */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    min-height: 70vh; /* Minimum height for main content area */
+    margin: 20px auto; /* Center the main content horizontally */
+}
+
+.header-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 600px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Space above and below the image */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+h2 {
+    color: #343a40; /* Dark text color for headings */
+    margin: 20px 0; /* Space above and below headings */
+}
+
+p {
+    margin-bottom: 20px; /* Space below paragraphs */
+    color: #555; /* Subtle text color for paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul > li {
+        display: block; /* Stack navigation items on small screens */
+        margin: 10px 0; /* Space between stacked items */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+}

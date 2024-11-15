@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <link rel="stylesheet" href="library.css">
+    <script>
+        function openRegistration() {
+            window.open("registration.html", "_blank", "width=400,height=300");
+        }
+
+        function openLogin(type) {
+            const url = type === 'user' ? 'user_login.html' : 'admin_login.html';
+            window.open(url, "_blank", "width=400,height=300");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Library System</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" onclick="openLogin('user')">Login</a>
+                    <ul>
+                        <li><a href="#" onclick="openLogin('user')">User </a></li>
+                        <li><a href="#" onclick="openLogin('admin')">Admin</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="openRegistration()">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="library.jpeg" alt="Library" class="header-image"> <!-- Replace with your image path -->
+        <h2>Welcome to the Library System</h2>
+        <p>Your gateway to a world of knowledge.</p>
+    </main>
+</body>
+</html>

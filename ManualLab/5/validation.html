@@ -1,0 +1,46 @@
+<html>
+<body>
+<form onsubmit="return validateForm()">
+<label>Username:</label>
+<input type="text" id="username" name="username">
+<span id="usernameError"></span>
+
+<label>Phone Number:</label>
+<input type="text" id="phoneNumber" name="phoneNumber">
+<span id="phoneNumberError"></span>
+
+<input type="submit" value="Submit">
+</form>
+
+<script>
+function validateForm() 
+{
+var username = document.getElementById("username").value;
+var phoneNumber = document.getElementById("phoneNumber").value;
+
+  // Validate username
+  if (!/^[a-zA-Z]{7,12}$/.test(username)) 
+{
+    document.getElementById("usernameError").innerHTML = "Username must be 7-12 characters long and contain only letters.";
+    return false;
+  } 
+else 
+{
+    document.getElementById("usernameError").innerHTML = "";
+  }
+  
+  // Validate phone number
+  if (!/^[6-9][0-9]{9}$/.test(phoneNumber)) 
+{
+    document.getElementById("phoneNumberError").innerHTML = "Phone number must be 10 digits long, starting with 6-9.";
+    return false;
+  }
+ else 
+{
+    document.getElementById("phoneNumberError").innerHTML = "";
+  }
+  return true;
+}
+</script>
+</body>
+</html>
